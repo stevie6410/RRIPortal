@@ -1,1 +1,16 @@
 <h2>Orders Backlog List</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Order Number</th>
+        <th>Part Number</th>
+        <th>Part Description</th>
+    </tr>
+    <tr *ngFor="#order of orders">
+        <td>{{order.id}}</td>
+        <td>{{order.OrderNumber}}</td>
+        <td>{{order.PartNumber}}</td>
+        <td>{{order.PartDescription}}</td>
+    </tr>
+</table>

@@ -1,11 +1,19 @@
 import { Component, OnInit } from 'angular2/core';
+import { Order } from '../../models/Order';
+import { OrdersService } from '../../services/orders-service';
 
 @Component({
     selector: 'backlog-list',
-    template: '<h3>Backlog List</h3>'
+    templateUrl: 'app/components/backlog-list/backlog-list.html',
+    providers: [OrdersService]
 })
 export class BacklogListComponent implements OnInit {
-    constructor() { }
+    constructor(private _ordersService: OrdersService) {
+        this.orders = _ordersService.getOrdersBacklog();
+    }
 
-    ngOnInit() { }
+    orders: Order[] = [];
+
+    ngOnInit() {
+    }
 }
