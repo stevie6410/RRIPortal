@@ -6,7 +6,7 @@ import {BacklogListComponent} from '../../components/backlog-list/backlog-list.c
     template: 
     `
         <h1>{{title}}</h1>
-        <backlog-list>Loading Backlog List...</backlog-list>
+        <backlog-list>Loading Backlog List</backlog-list>
     `,
     providers: [BacklogListComponent]
 })
