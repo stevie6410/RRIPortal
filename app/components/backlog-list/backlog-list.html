@@ -1,10 +1,8 @@
-<h2>Orders Backlog List</h2>
-
-<table>
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
     <tr>
         <th>Id</th>
         <th>Order Number</th>
-        <th>Part Number</th>
+        <th class="mdl-data-table__cell--non-numeric">Part Number</th>
         <th>Part Description</th>
     </tr>
     <tr *ngFor="#order of orders">
