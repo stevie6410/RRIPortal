@@ -6,6 +6,11 @@
 
 /* Toggle Styles */
 
+#titletext{
+    margin-left: -92px;
+    color: white;
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -25,8 +30,9 @@
     width: 0;
     height: 100%;
     margin-left: -250px;
+    margin-top: 40px;
     overflow-y: auto;
-    background: #000;
+    background: #263238;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -61,7 +67,7 @@
 
 .sidebar-nav li {
     text-indent: 20px;
-    line-height: 40px;
+    line-height: 60px;
 }
 
 .sidebar-nav li a {
