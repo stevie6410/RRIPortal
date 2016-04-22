@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-import { Component } from 'angular2/core';
+import { Component, OnInit, OnDestroy } from 'angular2/core';
 
-@Component({
-    selector: 'backlog-list',
-    template: '<h3>{{backlogCount}}</h3>'
-})
-export class BacklogListComponent {
-    
-    backlogCount = "There are 10 orders in the backlog";
-    
-    constructor() { }
-=======
-import { Component, OnInit } from 'angular2/core';
 import { Order } from '../../models/Order';
 import { OrdersService } from '../../services/orders-service';
+
+declare var $:any;
+declare var TweenMax:any;
+
 
 @Component({
     selector: 'backlog-list',
@@ -28,6 +20,10 @@ export class BacklogListComponent implements OnInit {
     orders: Order[] = [];
 
     ngOnInit() {
+         TweenMax.fromTo($(".rri-backloglist"), 1, { opacity: 0 }, { opacity: 1 });
     }
->>>>>>> 91ac5861476efdf258b46e9c7a8d11e996e858dd
+    
+    ngOnDestroy(){
+          TweenMax.fromTo($(".rri-backloglist"), 1, { opacity: 1 }, { opacity: 0 });
+    }
 }
