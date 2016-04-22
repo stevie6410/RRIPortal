@@ -18,6 +18,11 @@ export class OrdersService {
     getOrdersOnHold() {
         return this.mockOrders;
     }
+    
+    getOrder(id: number){
+        return this.mockOrders[id -1];
+    }
+    
 
     mockOrders = [
         new Order(1, 123456, "OP", 1, "1005535-123", "BRACKET", new Date(), "First Artice Inspection"),

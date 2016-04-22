@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from 'angular2/core';
+import {ROUTER_DIRECTIVES} from 'angular2/router';
 
 import { Order } from '../../models/Order';
 import { OrdersService } from '../../services/orders-service';
@@ -10,7 +11,8 @@ declare var TweenMax:any;
 @Component({
     selector: 'backlog-list',
     templateUrl: 'app/components/backlog-list/backlog-list.html',
-    providers: [OrdersService]
+    providers: [OrdersService],
+    directives: [ROUTER_DIRECTIVES] 
 })
 export class BacklogListComponent implements OnInit {
     constructor(private _ordersService: OrdersService) {
